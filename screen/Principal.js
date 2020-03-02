@@ -8,7 +8,7 @@ import { View, Text, Button, } from 'react-native';
 
 
 
-class Perfil extends Component {
+class Principal extends Component {
 
   render() {
     const navegar = this.props.navigation;
@@ -26,4 +26,4 @@ class Perfil extends Component {
   }
 }
 
-export default Perfil;
+export default Principal;
