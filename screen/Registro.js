@@ -13,7 +13,7 @@ class Registro extends Component {
               
             </CardItem>
             <CardItem >
-              <Text style={styles.TextCenter}>Registrate con una red social</Text>
+              <Text style={styles.TextCenter}>Registrate</Text>
               
            </CardItem>
            <CardItem >
@@ -21,13 +21,13 @@ class Registro extends Component {
                 <Button info style={styles.Boton2}><Icon type='AntDesign' name='twitter'/></Button>
                
            </CardItem>
-            <Text style={styles.TextCenter}>O</Text>
+            <Text style={styles.TextCenter}>o</Text>
             
             <CardItem>
               <Body bordered style={styles.Botono}>         
               <Item>
                 
-                <Input placeholder='Nombre'/>
+             
                 <Icon type = 'FontAwesome'name ='user'/>
                 <Input placeholder='Usuario' />
               </Item>
@@ -37,7 +37,7 @@ class Registro extends Component {
               </Item>
               <Item last>
                 <Icon type = 'Entypo'name ='phone'/>
-                <Input placeholder='Número de telefono' />
+                <Input placeholder='Telefono' />
               </Item>
               <Item last>
                <Icon type = 'FontAwesome'name ='lock'/>
@@ -65,6 +65,7 @@ const styles=StyleSheet.create({
   TextCenter:{
     textAlign:'center',
     width:'100%',
+    fontSize:20
   },
   Boton:{
     marginLeft:'55%',
@@ -76,7 +77,7 @@ const styles=StyleSheet.create({
 
   },
   Boton2:{
-    marginRight:'30%',
+    marginRight:'10%',
   },
   Boton3:{
     marginLeft:'30%',

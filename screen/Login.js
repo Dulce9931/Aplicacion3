@@ -44,10 +44,10 @@ class Login extends Component {
         <Container>
             <Content padder contentContainerStyle = {misEstilos.content}>
             <Card>
-                <CardItem header bordered style= {misEstilos.arribaTexto}>
+                <CardItem header bordered >
     <Text style = {misEstilos.textCenter} >Login</Text>
                 </CardItem>
-                <CardItem bordered style= {misEstilos.abajoDatos}>
+                <CardItem bordered>
                 <Body style = {misEstilos.body}>
                     <Item lineLabel>
                         <Icon type = 'FontAwesome' name = 'user-circle-o'></Icon>
@@ -67,13 +67,13 @@ class Login extends Component {
                     </Item>
                 </Body>
                 </CardItem>
-                <CardItem footer bordered style = {misEstilos.pie}>
+                <CardItem footer bordered >
                 
                 
                 <Button success onPress={() => navegar.navigate('Registro')} ><Text> Registrarse </Text></Button>
             
                 </CardItem>
-                <CardItem footer bordered style = {misEstilos.pie}>
+                <CardItem footer bordered>
                 
                 <Button primary onPress={this.onButtonPress} ><Text> Iniciar Sesión </Text></Button>
                 </CardItem>
@@ -93,20 +93,17 @@ const misEstilos = StyleSheet.create({
   content: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#FFCC66'
+   
   
   },
 
   textCenter: {
     textAlign: 'center',
     width: '100%',
-    color: 'white'
+    color: 'black',
+    fontSize:30,
   },
 
-  pie: {
-    justifyContent: 'center',
-    backgroundColor: '#090C2A'
-  },
 
   centrar: {
     flex: 1,
@@ -114,17 +111,7 @@ const misEstilos = StyleSheet.create({
     justifyContent: 'center'
   },
 
-  body: {
-    paddingVertical: 35,
-  },
 
-  arribaTexto: {
-    backgroundColor: '#090C2A'
-  },
-
-  abajoDatos: {
-    backgroundColor: '#99CCCC'
-  }
 });
 
 export default Login;
