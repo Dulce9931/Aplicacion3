@@ -22,7 +22,7 @@ class Login extends Component {
   onButtonPress = () => {
       this.setState({
       showIndicator: true
-      }),this.props.navigation.navigate('Principal',{contra: this.state.contra, usuario: this.state.usuario})};
+      }),this.props.navigation.navigate ('Principal', {contra: this.state.contra , usuario: this.state.usuario})};
 
   render(){
   const navegar = this.props.navigation;
