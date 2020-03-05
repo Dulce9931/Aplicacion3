@@ -61,7 +61,7 @@ toggleSwitch = (value) => {
      
         <FlatList
         data={this.state.dataSource}
-    renderItem={({item})=><Text>{item.title},{item.releaseYear}</Text>}
+    renderItem={({item})=><Text>Titulo:  {item.title}, Director:{item.director}, Episodio{item.episode_id}</Text>}
     keyExtractor={({id},index)=> id}/>
        <Button
             title='Regresar'
