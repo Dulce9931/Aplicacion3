@@ -11,11 +11,15 @@ import{ createStackNavigator }from '@react-navigation/stack';
 import Login from './screen/Login';
 import Registro from './screen/Registro';
 import Principal from './screen/Principal';
+import { getActiveChildNavigationOptions } from 'react-navigation';
+import { cos } from 'react-native-reanimated';
+
+
 const Stack = createStackNavigator();
 
 
 const App:() => React$Node = () => {
-
+ 
   return(
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Login'>

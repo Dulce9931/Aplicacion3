@@ -4,25 +4,51 @@ Fecha: 02/03/2020
 Materia: Desarrollo Movil
 Profesor:Hector Saldaña Benitez */
 import React, { Component } from "react";
-import { Container, View, Content, Card, CardItem, Text, Body, Button, Item, Label, Input, Icon } from "native-base";
+import { Container,
+         View,
+        Content,
+        Card, 
+        CardItem, 
+        Text, 
+        Body, 
+        Button, 
+        Item, 
+        Label, 
+        Input, 
+        Icon } from "native-base";
 import {
   StyleSheet,
-  ActivityIndicator
+  ActivityIndicator,Alert
 } from 'react-native';
+import api from '../data/api';
 
 
 
 class Login extends Component {
+
   
   constructor(props) {
     super(props);
-    this.state = {usuario: '', contra: ''};
+    this.state = 
+    {usuario: ''
+    , password: ''
+  }
+  }
+  login = async()=>{
+    let validarLog = await api.validarLog(this.state.usuario,this.state.password)
+    if(validarLog.status ==1){
+      this.props.navigation.navigate('Principal');
+    }else{
+      Alert.alert('Usuario o clave')
+    }
+
+
   }
   state = {showIndicator:false}
   onButtonPress = () => {
       this.setState({
       showIndicator: true
-      }),this.props.navigation.navigate ('Principal', {contra: this.state.contra , usuario: this.state.usuario})};
+      }),this.props.navigation.navigate ('Principal', {contra: this.state.password , usuario: this.state.usuario})};
 
   render(){
   const navegar = this.props.navigation;

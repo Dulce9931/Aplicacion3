@@ -56,7 +56,7 @@ toggleSwitch = (value) => {
     return (
       <View >
         <Text>Hola {this.props.route.params.usuario}</Text>
-        <Text>Tu contraseña es {this.props.route.params.contra}</Text>
+        <Text>Tu contraseña es {this.props.route.params.password}</Text>
         <Text class="color">USO DE API´s</Text>
      
         <FlatList
@@ -66,8 +66,6 @@ toggleSwitch = (value) => {
        <Button
             title='Regresar'
             onPress={()=> navegar.navigate('Login')}
-            
-
         />
         {/*Text to show the text according to switch condition*/}
         <Text>{this.state.switchValue?'Switch is ON':'Switch is OFF'}</Text>
